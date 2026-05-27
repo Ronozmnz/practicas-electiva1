@@ -1,17 +1,17 @@
 :root {
-    --color-fondo: #0000007a;
-    --color-primario: #004928; 
+    --color-fondo: #f8fafc;
+    --color-primario: #4f46e5; 
     --color-secundario: #ffffff;
-    --color-texto: #1a1a1a;
-    --color-enlace: #40916c;
-    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --sombra-fuerte: 0 8px 24px rgba(0, 0, 0, 0.15);
-    --radio-borde: 12px;
+    --color-texto: #1e293b;
+    --color-enlace: #6366f1;
+    --sombra-suave: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --sombra-fuerte: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --radio-borde: 16px;
 }
 
 body {
-    background-color: var(--color-fondo);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 40px 20px;
     color: var(--color-texto);
@@ -21,10 +21,12 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 800;
     color: var(--color-primario);
     margin-bottom: 10px;
     text-align: center;
+    letter-spacing: -0.025em;
 }
 
 hr {
@@ -37,12 +39,12 @@ hr {
 /* Contenedor de la lista */
 ol {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 0;
-    list-style: none; /* Quitamos los números para un look más limpio */
+    list-style: none;
 }
 
 /* Estilo de cada item de la lista (Tarjeta) */
@@ -50,29 +52,31 @@ li {
     background-color: var(--color-secundario);
     border-radius: var(--radio-borde);
     box-shadow: var(--sombra-suave);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     overflow: hidden;
     display: flex;
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
 li:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--sombra-fuerte);
+    border-color: var(--color-primario);
 }
 
 /* Estilo de los enlaces dentro de las tarjetas */
 li a {
     text-decoration: none;
     color: var(--color-texto);
-    font-weight: 600;
-    padding: 25px;
+    font-weight: 500;
+    padding: 30px 20px;
     width: 100%;
     display: block;
     text-align: center;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 li:hover a {
-    color: var(--color-primario);
-    background-color: rgba(45, 106, 79, 0.05);
+    color: white;
+    background-color: var(--color-primario);
 }

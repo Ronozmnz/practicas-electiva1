@@ -1,51 +1,88 @@
 :root {
-    --color-primario: #2d6a4f; /* Verde bosque */
+    --color-primario: #2d6a4f; /* Verde bosque para el tema de animales */
     --color-secundario: #40916c;
-    --color-acento: #d8f3dc;
-    --texto-oscuro: #1b4332;
-    --fondo-claro: #e9ecef; /* Un gris claro que hace resaltar las tarjetas blancas */
+    --color-fondo: #f0f4f1;
+    --white: #ffffff;
+    --gray-700: #1b4332;
+    --gray-200: #b7e4c7;
+    --radius: 12px;
 }
-
-#bordeazul{
-    border-radius: 12px;
-}
-
-.bordenegro{
-    border-radius: 12px;
-}
-
-#bordeverde{
-    border-radius: 12px;
-}
-
 
 .cajacss{    
     color: var(--color-primario);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
+    font-size: 2rem;
+    font-weight: bold;
     text-align: center;
+    margin: 1.5rem 0;
 }
 
-
 h1{
-    color: var(--texto-oscuro);
+    color: var(--gray-700);
     text-align: center;
-    margin-top: 20px;
+    padding: 10px 0;
 }
 
 h2{
     color: var(--color-primario);
-    margin-bottom: 10px;
-    text-align: center;
+    margin-top: 1.5rem;
+    border-bottom: 2px solid var(--gray-200);
+    padding-bottom: 0.5rem;
 }
 
-
 body{
-    background-color: var(--fondo-claro);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    padding: 0;
-    margin: 0;
-    color: #333;
+    background-color: var(--color-fondo);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--gray-700);
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="date"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 20px 0;
+    display: inline-block;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background-color: var(--color-primario);
+    color: var(--white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+button:hover, input[type="submit"]:hover {
+    opacity: 0.9;
 }
 
 /* Estilo para el contenedor de las tarjetas */
@@ -91,11 +128,12 @@ body{
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--color-primario);
-    color: white;
+    background: var(--gray-700);
+    color: var(--white);
+    border-radius: var(--radius) var(--radius) 0 0;
+    margin-top: 40px;
 }
 
-/* Aseguramos que la sección de info ocupe todo el ancho para que el centrado sea efectivo */
 #info {
     width: 100%;
 }
@@ -106,8 +144,9 @@ footer {
 
 nav {
     background-color: var(--color-primario);
-    padding: 20px 0;
+    padding: 15px 0;
     margin-bottom: 20px;
+    border-radius: var(--radius);
 }
 
 nav ul {
@@ -120,14 +159,14 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--color-acento);
+    opacity: 0.8;
 }
 
 .video-contenedor {
@@ -136,4 +175,12 @@ nav a:hover {
     align-items: center;    /* Centra horizontalmente */
     text-align: center;
     margin: 30px 0;
+}
+
+/* Clases de utilidad para contenedores */
+.bordenegro {
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 20px;
+    background-color: var(--white);
 }

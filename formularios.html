@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>Formularios</title>
-        <link rel="stylesheet" href="./css/estilo.css">
+        <link rel="stylesheet" href="../css/estilo.css">
     </head>
     
     <body>
@@ -42,15 +42,19 @@
         <!-- Fecha -->
 
         <label for="fecha"><b>Fecha Nacimiento: </b></label>
-        <input type="date" id="fecha_nac" name="fecha_nac" min="2026_04_29"><br><br>
+        <input type="date" id="fecha_nac" name="fecha_nac" min="2026-04-29"><br><br>
 
         <!-- Deportes -->       
 
         <h2>Deportes: </h2>
-        <label for="deportes">
-        <input type="checkbox" value="Baloncesto"><b>Baloncesto</b></label><br><br>
-        <label for="Futbol"><input type="checkbox" value="Futbol"><b>Futbol</b></label><br></label><br>
-        <label for="Natacion"><input type="checkbox" value="Natacion"><b>Natacion</b></label><br></label><br>    
+        <input type="checkbox" id="baloncesto" value="Baloncesto">
+        <label for="baloncesto"><b>Baloncesto</b></label><br><br>
+
+        <input type="checkbox" id="futbol" value="Futbol">
+        <label for="futbol"><b>Futbol</b></label><br><br>
+
+        <input type="checkbox" id="natacion" value="Natacion">
+        <label for="natacion"><b>Natacion</b></label><br><br>    
 
 
         <!-- Lista Desplegable -->
@@ -78,11 +82,8 @@
         <!-- Boton -->    
 
         <button type="submit">Enviar formulario</button>
-
-        <button type="submit"><a href="index.html">Regresar a Electiva I</a></button>
-
-        
-
+        <br><br>
+        <a href="../index.html" class="btn-regresar">Regresar a Inicio</a>
 
         </form>
     </body>
