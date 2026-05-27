@@ -1,0 +1,177 @@
+:root {
+    --color-fondo: rgb(69, 152, 219);
+    --color-texto: white;
+    --color-titulo: #2c3e50;
+    --color-caja: #2980b9;
+    --borde-rojo: 2px solid red;
+    --borde-naranja: 2px solid orange;
+    --borde-rosa: 2px solid pink;    
+    --borde-verde: 2px solid green;
+    --padding-p: 20px;
+    --font-encabezado:"Bebas Neue", sans-serif; 
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 20px;
+}
+        
+.caja {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.caja p {
+    margin: 0;
+    background-color: var(--color-caja);
+}
+
+#rojo {
+    border: var(--borde-rojo);
+    padding: var(--padding-p);
+    color: var(--color-texto);
+    border-radius: 5px;
+}
+
+#naranja {
+    border: var(--borde-naranja);
+    padding: var(--padding-p);
+    color: var(--color-texto);
+    border-radius: 5px;
+}
+
+#rosa {
+    border: var(--borde-rosa);
+    padding: var(--padding-p);
+    color: var(--color-texto);
+    border-radius: 5px;
+}
+
+#verde {
+    border: var(--borde-verde);
+    padding: var(--padding-p);
+    color: var(--color-texto);
+    border-radius: 5px;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1{
+    font-family: var(--font-encabezado);
+    color: var(--color-titulo);
+
+}
+
+h2{
+    font-family: "FuentePersonalizada", sans-serif;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: white;
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes latido {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tarjeta {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 300px;
+    margin: 20px auto;
+    color: #2c3e50;
+    animation:  latido 5s ease-in-out infinite;
+}
+
+.tarjeta h2 {
+    text-align: center;
+    margin: 15px 0 5px 0;
+}
+
+.caja-animada {
+    animation: aparecer 1.5s ease-in-out 0.5s infinite alternate;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .tarjeta {
+        max-width: 600px;
+        display: flex;
+    }
+
+    .tarjeta-imagen {
+        width: 40%;
+        height: auto;        
+    }
+    
+    .tarjeta-contenido {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }    
+}
+
+
+@font-face {
+    font-family: "FuentePersonalizada";
+    src: url(../assets/fonts/BebasNeue-Regular.woff2) format('truetype');
+}
+
+

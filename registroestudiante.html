@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset=utf-8">
+        <title>Registro Estudiantes</title>
+        <style>
+
+            
+        </style>                      
+    </head>
+    
+    <body>
+        <h1>Registro Estudiantes</h1>
+
+        <form action="" method="get" enctype="multipart/form-data"></form>
+
+        <!-- Nombre y apellido -->
+
+        <label for="nombre"><b>Nombre:</b></label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Ej: Ronald" title="Ingrese solo letras"
+        minlength="4" maxlength="10">
+
+        <label for="apellido"><b>Apellido:</b></label>
+        <input type="text" id="apellido" name="apellido" required placeholder="Ej: Rativa" title="Ingrese solo letras"
+        minlength="4" maxlength="12"><br><br>
+
+        <!-- Cedula -->
+
+        <label for="cedula"><b>Cedula:</b></label>
+        <input type="text" id="cedula" name="cedula" title="Formato Valido: V-12345678 o E-12345678" 
+        placeholder="Ej: V-12345678" required>
+
+        <!-- Fecha de Nacimiento -->
+
+        <label for="fecha"><b>Fecha Nacimiento: </b></label>
+        <input type="date" id="fecha_nac" name="fecha_nac" min="2026_04_29"><br><br>
+
+        <!-- Sexo -->
+
+        <label for="Genero"><strong>Genero:</strong></label>
+        <input type="radio" id="f" name="Genero" value="femenino">
+        <label for="f">Femenino</label>
+        <input type="radio" id="m" name="Genero" value="masculino">
+        <label for="m">Masculino</label><br><br>
+
+        <!-- Mencion -->
+
+        <label for="mencion"><b>Mencion:</b></label>
+
+        <select name="mencion" id="mencion" required>
+            <option value="">Seleccionar</option>
+            <option value="Informatica">Informatica</option>
+            <option value="Quimica">Quimica</option>
+            <option value="Polimeros">Polimeros</option>
+            <option value="Electronica">Electronica</option>
+        </select><br><br>
+
+        <!-- Direccion -->
+
+        <label for="Direccion"><b>Direccion:</b></label><br>
+        <textarea name="Direccion" id="Direccion" rows="4"></textarea>
+
+        <!-- Documento Consignados -->
+
+        <h3>Documentos Consignados</h3>
+        <label for="bachiller">
+            <input type="checkbox" value="bachiller">
+            <b>Titulo Bachiller</b>
+        </label>
+        <label for="acta_nacimiento">
+            <input type="checkbox" value="acta_nacimiento">
+            <b>Acta de Nacimiento</b>
+        </label>
+        <label for="notas_certificadas">
+            <input type="checkbox" value="notas_certificadas">
+            <b>Notas Certificadas</b>
+        </label><br><br><br>
+        
+        <!-- Adjuntar Cedula-->
+
+        <label for="Archivo"><b>Adjuntar Cedula:</b></label>
+        <input type="file" id="archivo" name="archivo"><br><br>
+
+        <!-- Limpiar o enviar-->
+
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Enviar"><br><br>      
+
+        <button type="submit"><a href="index.html">Regresar a Electiva I</a></button>
+
+    </body>
+
+</html>

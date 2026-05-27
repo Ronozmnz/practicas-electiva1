@@ -1,0 +1,51 @@
+/* 1. Estilo General */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f2f5; /* Un gris azulado muy suave */
+        color: #1c1e21;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+
+    /* 2. El Título Principal */
+    h1 {
+        color: #2c3e50;
+        border-bottom: 3px solid #3498db; /* Línea azul debajo */
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    /* 3. Estilo de la Lista (El Contenedor) */
+    ol {
+        background: white;
+        padding: 40px 60px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra elegante */
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* 4. Los Items de la Lista */
+    li {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #7f8c8d;
+    }
+
+    /* 5. Los Enlaces (Links) */
+    a {
+        text-decoration: none; /* Quita el subrayado feo */
+        color: #3498db;
+        transition: all 0.3s ease; /* Hace que el cambio de color sea suave */
+    }
+
+    a:hover {
+        color: #2980b9;
+        padding-left: 10px; /* Efecto de movimiento al pasar el mouse */
+        text-decoration: underline;
+    }

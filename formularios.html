@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Formularios</title>
+        <link rel="stylesheet" href="/css/estilo.css">
+    </head>
+    
+    <body>
+
+        <h1>Formulario de Contacto</h1>
+
+        <form action="" method="post">
+
+        <!-- 1. Caja de texto con Regex (Solo letras y espacios, 3-20 caracteres) -->
+
+        <label for="nombre">Nombre:</label><br>
+            <input 
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu Nombre"
+                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{3,20}"
+                title="Solo letras, entre 3 y 20 caracteres"
+                required>
+                <br><br>
+
+        <!-- Edad -->
+
+        <label for="edad"><b>Edad: </b></label>
+        <input type="number" id="edad" name="edad" min="1" max="100" required><br><br>
+
+        <!-- Botones de Opcion -->
+        
+        <p>Genero</p>
+        <input type="radio" id="m" name="Genero" value="masculino">
+        <label for="m">Masculino</label>
+        <input type="radio" id="f" name="Genero" value="femenino">
+        <label for="f">Femenino</label><br><br>
+
+        <!-- Fecha -->
+
+        <label for="fecha"><b>Fecha Nacimiento: </b></label>
+        <input type="date" id="fecha_nac" name="fecha_nac" min="2026_04_29"><br><br>
+
+        <!-- Deportes -->       
+
+        <h2>Deportes: </h2>
+        <label for="deportes">
+        <input type="checkbox" value="Baloncesto"><b>Baloncesto</b></label><br><br>
+        <label for="Futbol"><input type="checkbox" value="Futbol"><b>Futbol</b></label><br></label><br>
+        <label for="Natacion"><input type="checkbox" value="Natacion"><b>Natacion</b></label><br></label><br>    
+
+
+        <!-- Lista Desplegable -->
+
+        <label for="pais">Pais:</label><br>
+            <select name="pais" id="pais">
+                <option value="mx">Mexico</option>
+                <option value="es">Espana</option>
+                <option value="ar">Argentina</option>
+                <option value="ve">Venezuela</option>
+            </select><br><br>
+        
+        
+
+        <!-- Casilla de Verificacion -->
+
+        <input type="checkbox" id="novedades" name="novedades">
+        <label for="novedades">Quiero recibir noticias por correo</label><br><br>
+
+        <!-- Area de Texto -->
+
+        <label for="mensaje">Mensaje</label><br>
+        <textarea name="mensaje" id="mensaje" rows="4" cols="30"></textarea><br><br>       
+
+        <!-- Boton -->    
+
+        <button type="submit">Enviar formulario</button>
+
+        <button type="submit"><a href="index.html">Regresar a Electiva I</a></button>
+
+        
+
+
+        </form>
+    </body>
+
+</html>

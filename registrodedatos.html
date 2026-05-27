@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Registro de Datos</title>
+        <link rel="stylesheet" href="/css/estilo.css">
+    </head>
+    
+    <body>
+        <h1>Registro de Datos</h1>
+
+        <form action="" method="get" enctype="multipart/form-data">
+
+        <!-- Nombre y Apellido -->
+
+        <label for="nombre"><strong>Nombre:</strong></label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Ronald" title="Ingrese solo letras" 
+            pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{3,20}" minlength="4" maxlength="10">        
+        
+        <label for="apellido"><strong>Apellido:</strong></label>
+            <input type="text" id="apellido" name="apellido" required placeholder="Ej: Rativa" title="Ingrese solo letras"
+            pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{3,20}" minlength="4" maxlength="12"><br><br>
+            
+        <!-- Edad y Otro Eje Edad -->
+
+        <label for="edad"><strong>Edad:</strong></label>
+        <input type="number" id="edad" name="edad" min="1" max="100" required>
+        <strong><label for="edad2"> Otro Eje Edad:</label></strong>
+        
+        <input type="text" id="edad2" name="edad2" required placeholder="Ej: 25 edad mayor 1"
+         title="Edad debe ser mayor a 0 y hasta 130" pattern="^(?:[1-9][0-9]?|130)$" minlength="1" maxlength="3">       
+        <br><br>        
+        
+        <!-- Fecha -->
+
+        <label for="fecha"><b>Fecha Nacimiento: </b></label>
+        <input type="date" id="fecha_nac" name="fecha_nac" min="2026_04_29"><br><br>
+
+        <!-- Cedula -->
+
+        <label for="cedula"><strong>Cedula:</strong></label>
+        <input type="text" id="cedula" name="cedula" pattern="^[VE]-[0,9]{7,8}$"
+        title="Formato Valido: V-12345678 o E-12345678" placeholder="Ej: V-12345678"
+        required><br><br>
+
+        <!-- Telefono -->
+        
+        <label for="Telefono"><strong>Telefono:</strong></label>
+        <input type="tel" id="Telefono" name="Telefono"
+         pattern="^(0414|0424|0412|0426|0416)[0-9]{7}$"
+         title="Formato Valido: 0424/0414/0412/0422/0416 seguido de 7 digitos"
+         placeholder="Ej: 0424-4212345" required> <br><br>
+
+        <!-- Sexo o Genero -->
+        
+        <label for="Genero"><strong>Genero:</strong></label>
+        <input type="radio" id="m" name="Genero" value="masculino">
+        <label for="m">Masculino</label>
+        <input type="radio" id="f" name="Genero" value="femenino">
+        <label for="f">Femenino</label><br>
+
+
+        <!-- Deportes -->       
+
+        <h3>Deportes</h3>
+        <label for="deportes">
+            <input type="checkbox" value="Baloncesto">
+            <b>Baloncesto</b>
+        </label>
+        <label for="Futbol">
+            <input type="checkbox" value="Futbol">
+            <b>Futbol</b>
+        </label>
+        <label for="Natacion">
+            <input type="checkbox" value="Natacion">
+            <b>Natacion</b>
+        </label><br><br> 
+        
+        <!-- Email y clave-->
+
+        <label for="correo"><strong>Correo Electronico:</strong></label>
+        <input type="email" id="correo" name="correo" required placeholder="Ej: correo@ejemplo.com"
+        title="Ingrese un correo electronico valido"> <br><br>
+
+        <label for="clave"><strong>Clave:</strong></label>
+        <input type="password" id="clave" name="clave" required placeholder="Ingrese su clave"
+        title="La clave debe tener al menos una mayuscula, una minuscula y un numero"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <br><br>
+
+        <!-- Color -->
+
+        <label for="color"><strong>Color Favorito:</strong></label>
+        <input type="color" id="color_favorito" name="color_favorito"><br><br>
+
+        <!-- Mencion -->
+
+        <label for="mencion"><strong>Mencion:</strong></label>
+
+        <select name="mencion" id="mencion" required>
+            <option value="">Seleccione una opcion</option>
+            <option value="Informatica">Informatica</option>
+            <option value="Quimica">Quimica</option>
+            <option value="Polimeros">Polimeros</option>
+        </select><br><br>
+
+        <!-- Subir Archivo -->
+
+        <label for="Archivo"><strong>Subir Archivo:</strong></label>
+        <input type="file" id="archivo" name="archivo"><br><br>
+
+        <!-- Direccion -->
+        
+        <label for="Direccion"><strong>Direccion:</strong></label><br>
+        <textarea name="Direccion" id="Direccion" rows="4"></textarea><br><br>
+
+        <!-- Campo Oculto -->
+
+        <input type="hidden" name="id_registro" value="103">
+
+
+        <!-- Lista Desplegable -->
+
+        <label for="pais">Pais:</label><br>
+            <select name="pais" id="pais">
+                <option value="mx">Mexico</option>
+                <option value="es">Espana</option>
+                <option value="ar">Argentina</option>
+                <option value="ve">Venezuela</option>
+            </select><br><br>       
+
+        <!-- Casilla de Verificacion -->
+
+        <input type="checkbox" id="novedades" name="novedades">
+        <label for="novedades">Quiero recibir noticias por correo</label><br><br>
+
+        <!-- Botones -->    
+
+        <button type="reset" class="reset">Reset</button>
+        <button type="submit" class="enviar">Enviar</button><br><br>
+
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Enviar Datos"><br><br>
+
+        <button type="submit"><a href="index.html">Regresar a Electiva I</a></button>
+        
+        
+
+
+        </form>
+    </body>
+
+</html>

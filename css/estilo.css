@@ -1,0 +1,139 @@
+:root {
+    --color-primario: #2d6a4f; /* Verde bosque */
+    --color-secundario: #40916c;
+    --color-acento: #d8f3dc;
+    --texto-oscuro: #1b4332;
+    --fondo-claro: #e9ecef; /* Un gris claro que hace resaltar las tarjetas blancas */
+}
+
+#bordeazul{
+    border-radius: 12px;
+}
+
+.bordenegro{
+    border-radius: 12px;
+}
+
+#bordeverde{
+    border-radius: 12px;
+}
+
+
+.cajacss{    
+    color: var(--color-primario);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+h1{
+    color: var(--texto-oscuro);
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2{
+    color: var(--color-primario);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+body{
+    background-color: var(--fondo-claro);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #333;
+}
+
+/* Estilo para el contenedor de las tarjetas */
+#tipos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    border: none; /* Quitamos el borde negro tosco */
+}
+
+/* Estilo de Tarjetas (Cards) */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 15px 15px 0 0;
+}
+
+.card p {
+    padding: 0 15px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--color-primario);
+    color: white;
+}
+
+/* Aseguramos que la sección de info ocupe todo el ancho para que el centrado sea efectivo */
+#info {
+    width: 100%;
+}
+
+#info p, header p {
+    text-align: center;
+}
+
+nav {
+    background-color: var(--color-primario);
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-acento);
+}
+
+.video-contenedor {
+    display: flex;
+    flex-direction: column; /* Alinea video y texto uno arriba del otro */
+    align-items: center;    /* Centra horizontalmente */
+    text-align: center;
+    margin: 30px 0;
+}

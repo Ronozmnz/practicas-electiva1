@@ -1,0 +1,78 @@
+:root {
+    --color-fondo: #0000007a;
+    --color-primario: #004928; 
+    --color-secundario: #ffffff;
+    --color-texto: #1a1a1a;
+    --color-enlace: #40916c;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --sombra-fuerte: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --radio-borde: 12px;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+hr {
+    width: 60px;
+    border: 2px solid var(--color-primario);
+    margin-bottom: 40px;
+    border-radius: 2px;
+}
+
+/* Contenedor de la lista */
+ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0;
+    list-style: none; /* Quitamos los números para un look más limpio */
+}
+
+/* Estilo de cada item de la lista (Tarjeta) */
+li {
+    background-color: var(--color-secundario);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+/* Estilo de los enlaces dentro de las tarjetas */
+li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 600;
+    padding: 25px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+li:hover a {
+    color: var(--color-primario);
+    background-color: rgba(45, 106, 79, 0.05);
+}

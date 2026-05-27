@@ -1,0 +1,39 @@
+:root{
+    --espacio: 20px;
+    --color: rgb(122, 46, 46);
+    --colorpalabra: white;
+}
+
+body{
+    background-color: var(--color);
+}
+
+p{
+    color: var(--colorpalabra);
+}
+
+.contenedor-principal {
+  display: flex;         /* Activa Flexbox */
+  flex-direction: row; /* Organiza los hijos (imagen y tabla) uno arriba del otro */
+  align-items: center;    /* Centra todo horizontalmente */
+  gap: var(--espacio);    /* Usamos la variable global */ 
+  padding: var(--espacio);
+}
+
+.borde-separador {
+  width: 90%;
+  border-bottom: 2px solid white; /* El borde que querías colocar entre ellos */
+  margin: 10px 0;
+}
+
+
+.contenedor{
+    display: flex;    
+}
+
+
+.caja{
+    border: solid 20px var(--colorpalabra);
+    background-color: green;
+    margin: 10px;
+}
