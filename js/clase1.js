@@ -1,15 +1,12 @@
-console.log("Esta funcion imprime en pantalla")
+let nombre = prompt("Ingresa tu nombre:");
+let edad = prompt("Ingresa tu edad:");
+let promedio = prompt("Ingresa tu promedio:");
 
-let variable = "let declara una variable"
+console.log("Nombre: " + nombre);
+console.log("Edad: " + edad);
+console.log("Promedio: " + promedio);
 
-const constante = "const declara una constante que no se puede modificar"
-
-let arr = [1,2,3,4,"hola",true,false,{id:1,nombre:"Ronald"},[1,2,3]];
-
-let objetc = {id:1,
-              nombre:"Ronald",
-            }
-
+alert("¡Hola " + nombre + "! Tienes " + edad + " años y tu promedio es " + promedio + ".");
 
 
             
