@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset=utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Imagenes - Videos y GIF</title>
+        <link rel="stylesheet" href="./css/multimedia.css">
     </head>    
     <body>
-        <h1>Fondos de los sistemas operativos Windows</h1>
-        <hr>
+        <main class="container">
+            <header class="header-section">
+                <h1>Fondos de Pantalla Windows</h1>
+                <p class="subtitle">Evolución visual de los sistemas operativos</p>
+            </header>
+            
+            <section class="gallery">
+                <img src="./img/fondos_pantallas/windowsxp.jpg" alt="WindowsXP" title="Windows XP">
+                <img src="./img/fondos_pantallas/windows7.png" alt="Windows7" title="Windows 7">
+                <img src="./img/fondos_pantallas/windows8.1.jpg" alt="Windows8.1" title="Windows 8.1">
+                <img src="./img/fondos_pantallas/windows10.jpg" alt="Windows10" title="Windows 10">        
+                <img src="./img/fondos_pantallas/windows11.png" alt="windows11" title="Windows 11">
+            </section>            
+            
+            <section class="video-section">
+                <h1>Videos Musicales</h1>
+                <div class="video-grid">
+                    <article class="video-card">
+                        <video controls muted loop>
+                            <source src="./videos/Caramelos de Cianuro - Secreto.mp4" type="video/mp4">
+                        </video>
+                        <h3><a href="https://open.spotify.com/intl-es/artist/34OLInsXImlQpjzmQw9Wd3?si=8qXwMHhxSMmoXW1Oue2dgQ" target="_blank">Caramelos de Cianuro - Secreto</a></h3>
+                    </article>
 
-        <img src="./img/fondos_pantallas/windowsxp.jpg" alt="WindowsXP" title="Este es el fondo de pantalla de Windows XP" width="200" height="200">
-        <img src="./img/fondos_pantallas/windows7.png" alt="Windows7" title="Este es el fondo de pantalla de Windows 7" width="200" height="200">
-        <img src="./img/fondos_pantallas/windows8.1.jpg" alt="Windows8.1" title="Este es el fondo de pantalla de Windows 8.1" width="200" height="200">
-        <img src="./img/fondos_pantallas/windows10.jpg" alt="Windows10" title="Este es el fondo de pantalla de Windows 10" width="200" height="200">        
-        <img src="./img/fondos_pantallas/windows11.png" alt="windows11" title="Este es el fondo de pantalla de Windows 11" width="200" height="200">
+                    <article class="video-card">
+                        <video controls muted loop>
+                            <source src="./videos/Daft Punk - Get Lucky (Official Video) feat. Pharrell Williams and Nile Rodgers.mp4" type="video/mp4">
+                        </video>
+                        <h3><a href="https://open.spotify.com/intl-es/artist/4tZwfgrHOc3mvqYlEYSvVi?si=AAyJmDMRSBWKZHDfByIyzQ" target="_blank">Daft Punk - Get Lucky</a></h3>
+                    </article>
+                </div>
+            </section>
 
-        <hr>
-        <h1>Video</h1>
-        <hr>
-        <video width="50%" controls muted loop>
-            <source src="./videos/Caramelos de Cianuro - Secreto.mp4" title="Caramelos de Cianuro - Secreto" type="video/mp4">
-        </video>
-        <hr>
-
-        <h1>GIF</h1>
-            <img src="./gif/daftpunk.gif" alt="Daft Punk" title="Around the World" width="300" height="300">
-        
-        <hr>
-        <a href="index.html">Regresar a Inicio</a>
+            <section class="gif-section">
+                <h1>Animaciones GIF</h1>
+                <img src="./gif/daftpunk.gif" alt="Daft Punk" class="gif-img">
+            </section>
+            
+            <footer class="footer-nav">
+                <a href="index.html" class="back-btn">Regresar a Inicio</a>
+            </footer>
+        </main>
     </body>
 </html>

@@ -39,7 +39,7 @@ hr {
 /* Contenedor de la lista */
 ol {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
     width: 100%;
     max-width: 1200px;
@@ -79,4 +79,20 @@ li a {
 li:hover a {
     color: white;
     background-color: var(--color-primario);
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+    
+    body {
+        padding: 20px 15px;
+    }
+
+    li a {
+        padding: 20px 15px;
+    }
 }
