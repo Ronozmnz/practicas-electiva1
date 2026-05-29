@@ -9,15 +9,28 @@
     --radio-borde: 16px;
 }
 
+/* Definición de la animación de entrada */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Empieza un poco más abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, var(--color-fondo) 0%, #c3cfe2 100%);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     margin: 0;
-    padding: 40px 20px;
+    padding: 40px 0 0 0; /* Quitamos el padding lateral y de abajo */
     color: var(--color-texto);
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: aparecer 1s ease-out; 
 }
 
 h1 {
@@ -25,6 +38,7 @@ h1 {
     font-weight: 800;
     color: var(--color-primario);
     margin-bottom: 10px;
+    padding: 0 20px; /* Compensamos el padding lateral quitado del body */
     text-align: center;
     letter-spacing: -0.025em;
 }
@@ -43,7 +57,8 @@ ol {
     gap: 24px;
     width: 100%;
     max-width: 1200px;
-    padding: 0;
+    padding: 0 20px; /* Añadimos padding aquí para que las tarjetas no toquen los bordes */
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
     list-style: none;
 }
 
@@ -77,7 +92,7 @@ li a {
 }
 
 li:hover a {
-    color: white;
+    color: var(--color-secundario);
     background-color: var(--color-primario);
 }
 
@@ -89,10 +104,57 @@ li:hover a {
     }
     
     body {
-        padding: 20px 15px;
+        padding: 20px 0 0 0;
     }
 
     li a {
         padding: 20px 15px;
+    }
+}
+
+footer {
+    background-color: var(--color-primario); 
+    color: var(--color-secundario);
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 60px; /* Despega el footer del contenido de arriba */
+    border-top: 3px solid #34495e;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;      /* Organiza el texto y el link en línea horizontal */
+    justify-content: center;  /* Centra todo el contenido */
+    align-items: center;      /* Alinea verticalmente el texto y el icono */
+    gap: 10px;                /* Separación limpia entre el texto y el enlace */
+    font-size: 0.95rem;
+}
+
+/* Eliminamos el margen del párrafo para una alineación vertical perfecta */
+.footer-content p {
+    margin: 0;
+}
+
+/* Resaltar nombre */
+.footer-content span {
+    color: #2ecc71; /* Verde esmeralda */
+    font-weight: bold;
+}
+
+/* Efecto para que la imagen de GitHub se levante al pasar el cursor */
+.footer-content a img {
+    transition: transform 0.3s ease; /* Hace que el movimiento sea suave */
+}
+
+.footer-content a:hover img {
+    transform: translateY(-5px); /* Desplaza la imagen 5 píxeles hacia arriba */
+}
+
+/* Ajuste automático para celulares (Responsive) */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column; /* Se pone uno abajo del otro en pantallas pequeñas */
+        gap: 10px;
+        text-align: center;
     }
 }
